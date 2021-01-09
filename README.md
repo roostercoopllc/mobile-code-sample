@@ -18,7 +18,7 @@ Requirements:
 3. Android Virtual Device configured through AVD
 
 If you have the proper operating system and virtual devices for the two different operating systems then you should be able to run the following command and produce both an .apk and .app files. They can be found in your .gitignored file structures here:
-* Android: xxxx\mobile-code-sample\application_app\build\app\outputs\apk\debug\app-debug.apk
+* Android: D:\code\mobile-code-sample\app\build\app\outputs\flutter-apk\app.apk
 * iOS: xxxx\<will fill out when I get back to my mac>
 
 ## Backend setup
@@ -37,7 +37,7 @@ xxxxx\mobile-code-sample>docker-compose up -d
 This will start a development instance inside the container which you can technically hot reload, but I haven't tested it, just fight me about it.
 
 ## Running the development instance
-First, you will need to change the IP address located on line 45 of ```main.dart``` to your local IP address. In production this would be a DNS record to be independant of hard coded values, but I am not too worried about right now. 
+First, you will need to change the IP address located on line  of ```./app/lib/main.dart``` to your local IP address. In production this would be a DNS record to be independant of hard coded values, but I am not too worried about right now. 
 If you are pulling and running the source code, you will need to have an emulated device running already to access the flutter development server. You can start the flutter development server by running the following command in the ./app directory:
 ```sh
 flutter run
@@ -46,7 +46,7 @@ This development server has a hot reload ability where changes in code can be se
 
 ## Notes
 1. Please note that no security is implemented so please don't use in production and do not transfer sensitive information
-2. I will include stable compiled .apks and .app files in the github repository
+2. I will include stable compiled .apks and .app files in the github repository. Update - Requires DNS records for RESTful API
 
 
 ## Reference
