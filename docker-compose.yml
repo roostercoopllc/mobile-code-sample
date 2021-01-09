@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  inspiro:
+    image: general-python-thing:latest
+    build: 
+      context: ./backend
+    container_name: inspiro
+    environment:
+      FLASK_APP: /app/simple_flask.py
+    volumes: 
+      - ${FLASK_FILE}:/app
+    networks: 
+      - mobileSupportNet
+    ports:
+      - "8080:5000"
+    command: python /app/simple_flask.py
+
+networks:
+  mobileSupportNet:
