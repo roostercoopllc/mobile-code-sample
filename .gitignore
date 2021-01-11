@@ -1,7 +1,5 @@
 # Development Environment Ignores
 .vscode
-android/
-ios/
 venv/
 
 # Built application files
